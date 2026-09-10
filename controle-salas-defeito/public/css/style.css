@@ -1,0 +1,108 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#f4f4f4;
+    margin:40px;
+}
+
+h1{
+    color:#0d47a1;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    background:#0d47a1;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#1565c0;
+}
+
+input, textarea, select{
+    width:300px;
+    padding:8px;
+    margin-top:5px;
+}
+
+div{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+    box-shadow:0 0 5px gray;
+}
+
+.login-container {
+    width: 450px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    color: #174ea6;
+}
+
+.login-container h2 {
+    margin-top: 30px;
+}
+
+.botoes-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.botao {
+    display: block;
+    padding: 15px;
+    background-color: #174ea6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.botao:hover {
+    background-color: #0d3b7a;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+.login-container input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.login-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #174ea6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.erro {
+    color: red;
+    font-weight: bold;
+}

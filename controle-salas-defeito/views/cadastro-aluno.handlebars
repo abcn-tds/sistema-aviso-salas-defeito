@@ -1,0 +1,43 @@
+<div class="login-container">
+
+    <h1>📝 Cadastro do Aluno</h1>
+
+    {{#if erro}}
+        <p class="erro">{{erro}}</p>
+    {{/if}}
+
+    <form action="/cadastro/aluno" method="POST">
+
+        <label>Nome:</label>
+        <input
+            type="text"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+        >
+
+        <label>E-mail:</label>
+        <input
+            type="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+        >
+
+        <label>Senha:</label>
+        <input
+            type="password"
+            name="senha"
+            placeholder="Crie uma senha"
+            required
+        >
+
+        <button type="submit">Criar cadastro</button>
+
+    </form>
+
+    <br>
+
+    <a href="/login/aluno">← Voltar para o login</a>
+
+</div>

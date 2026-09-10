@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Sala</title>
+</head>
+
+<body>
+
+<h1>Editar Sala</h1>
+
+<form action="/salas/editar" method="POST">
+
+<input type="hidden" name="id" value="{{sala.id}}">
+
+<label>Número da Sala</label><br>
+<input type="text" name="numero" value="{{sala.numero}}" required><br><br>
+
+<label>Bloco</label><br>
+<input type="text" name="bloco" value="{{sala.bloco}}" required><br><br>
+
+<label>Responsável</label><br>
+<input type="text" name="responsavel" value="{{sala.responsavel}}" required><br><br>
+
+<button type="submit">Salvar Alterações</button>
+
+</form>
+
+</body>
+
+</html>

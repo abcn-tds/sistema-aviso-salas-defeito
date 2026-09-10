@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Defeito</title>
+</head>
+
+<body>
+
+<h1>Cadastrar Defeito</h1>
+
+<form action="/defeitos/cadastrar" method="POST">
+
+<label>Sala</label><br>
+<input type="text" name="sala" required><br><br>
+
+<label>Tipo do defeito</label><br>
+<input type="text" name="tipo" required><br><br>
+
+<label>Descrição</label><br>
+<textarea name="descricao"></textarea><br><br>
+
+<label>Status</label><br>
+
+<select name="status">
+
+<option>Pendente</option>
+
+<option>Em manutenção</option>
+
+<option>Resolvido</option>
+
+</select>
+
+<br><br>
+
+<button>Cadastrar</button>
+
+</form>
+
+</body>
+
+</html>

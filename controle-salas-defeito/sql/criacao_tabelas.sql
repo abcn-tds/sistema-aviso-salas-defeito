@@ -1,0 +1,25 @@
+CREATE TABLE salas(
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+numero TEXT NOT NULL,
+
+bloco TEXT NOT NULL,
+
+responsavel TEXT NOT NULL
+
+);
+
+CREATE TABLE defeitos(
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+sala TEXT NOT NULL,
+
+tipo TEXT NOT NULL,
+
+descricao TEXT NOT NULL,
+
+status TEXT NOT NULL
+
+);
