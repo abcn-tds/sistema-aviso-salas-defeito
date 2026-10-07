@@ -11,35 +11,26 @@ Foram analisadas as histórias que ainda não foram entregues:
 
 Total: 34 pontos.
 
-## 2. Próxima Sprint
+## 2. Atualização do Kanban
 
-As histórias H4, H5, H8 e H9 serão priorizadas para a próxima Sprint.
+Para a próxima Sprint, serão priorizadas as histórias H4, H5, H8 e H9, que ainda não foram concluídas. As demais histórias já entregues permanecem na coluna Done.
 
-## 3. Relatório da Sprint anterior
+## 3. Entrega da Sprint anterior
 
-Foram concluídas 5 das 9 histórias planejadas.
-
-As histórias concluídas foram:
-
-- H1 – Ver salas com defeito
-- H2 – Cadastrar defeito em sala
-- H3 – Ver descrição do defeito
-- H6 – Pesquisar sala específica
-- H7 – Cadastro de pessoas
-
-As histórias que ficaram pendentes foram:
-
-- H4 – Receber aviso/notificação
-- H5 – Marcar sala como consertada
-- H8 – Sala de aulas
-- H9 – Equipamentos eletrônicos
+Na Sprint anterior foram concluídas 5 das 9 histórias planejadas, correspondendo a aproximadamente 55,6% das histórias. As histórias H4, H5, H8 e H9 ficaram pendentes para a próxima Sprint.
 
 ## 4. Lições aprendidas
 
-Durante a Sprint, o grupo percebeu a importância de realizar uma melhor estimativa das tarefas e acompanhar o andamento pelo Kanban. Também aprendemos que funcionalidades maiores podem ser divididas em tarefas menores para facilitar o desenvolvimento.
+Durante a Sprint, o grupo percebeu a importância de estimar melhor o tempo e a complexidade das tarefas. Também aprendemos que é importante acompanhar o Kanban e dividir funcionalidades maiores em tarefas menores.
 
-## 5. Acessibilidade
+## 5. Análise de acessibilidade
 
-Será realizada uma análise de acessibilidade utilizando o Google Lighthouse.
+Foi utilizada a ferramenta Lighthouse, disponível no Google Chrome, para analisar a acessibilidade do sistema.
 
-Após identificar as falhas, o grupo realizará as correções necessárias em pelo menos 50% dos problemas encontrados.
+Na primeira análise, o sistema obteve 96 pontos de acessibilidade. Foi identificada uma falha relacionada à ausência de um elemento principal (main landmark).
+
+A falha foi corrigida adicionando a tag `<main>` ao conteúdo principal da página.
+
+Após a correção, foi realizada uma nova análise utilizando o Lighthouse e o sistema obteve 100 pontos de acessibilidade.
+
+Dessa forma, a falha identificada foi corrigida e o sistema apresentou melhoria no resultado de acessibilidade.
