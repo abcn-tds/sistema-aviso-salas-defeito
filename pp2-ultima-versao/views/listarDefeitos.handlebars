@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Defeitos das Salas</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h1>🔧 Defeitos das Salas</h1>
+
+    <p>
+        Aqui estão os defeitos registrados pelos alunos.
+    </p>
+
+    <hr>
+
+    {{#each defeitos}}
+
+        <div class="sala">
+
+            <h2>
+                🏫 Sala {{sala}}
+            </h2>
+
+            <p>
+                <strong>🔧 Tipo do defeito:</strong>
+                {{tipo}}
+            </p>
+
+            <p>
+                <strong>📝 Descrição:</strong>
+                {{descricao}}
+            </p>
+
+            <p>
+                <strong>📌 Status:</strong>
+                {{status}}
+            </p>
+
+            <br>
+
+            <!-- EDITAR -->
+
+            <a href="/defeitos/editar/{{id}}">
+
+                <button type="button">
+                    ✏️ Editar
+                </button>
+
+            </a>
+
+
+            <!-- EXCLUIR -->
+
+            <form
+                action="/defeitos/excluir/{{id}}"
+                method="POST"
+                style="display: inline;"
+            >
+
+                <button
+                    type="submit"
+                    onclick="return confirm('Tem certeza que deseja excluir este defeito?')"
+                >
+                    🗑️ Excluir
+                </button>
+
+            </form>
+
+        </div>
+
+        <hr>
+
+    {{else}}
+
+        <div>
+
+            <h3>
+                ✅ Nenhum defeito cadastrado.
+            </h3>
+
+            <p>
+                Quando um aluno registrar um defeito,
+                ele aparecerá aqui para o administrador.
+            </p>
+
+        </div>
+
+    {{/each}}
+
+
+    <br>
+
+    <a href="/home">
+
+        <button type="button">
+            ⬅ Voltar ao menu
+        </button>
+
+    </a>
+
+</body>
+
+</html>

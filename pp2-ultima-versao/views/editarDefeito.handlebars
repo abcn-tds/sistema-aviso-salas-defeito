@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Defeito</title>
+</head>
+
+<body>
+
+<h1>Editar Defeito</h1>
+
+<form action="/defeitos/editar" method="POST">
+
+<input type="hidden" name="id" value="{{defeito.id}}">
+
+<label>Sala</label><br>
+<input type="text" name="sala" value="{{defeito.sala}}" required><br><br>
+
+<label>Tipo</label><br>
+<input type="text" name="tipo" value="{{defeito.tipo}}" required><br><br>
+
+<label>Descrição</label><br>
+<textarea name="descricao">{{defeito.descricao}}</textarea><br><br>
+
+<label>Status</label><br>
+
+<select name="status">
+    <option>Pendente</option>
+    <option>Em manutenção</option>
+    <option>Resolvido</option>
+</select>
+
+<br><br>
+
+<button type="submit">Salvar Alterações</button>
+
+</form>
+
+</body>
+
+</html>
