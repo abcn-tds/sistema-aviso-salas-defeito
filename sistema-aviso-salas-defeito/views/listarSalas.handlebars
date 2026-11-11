@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Lista de Salas</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h1>🏫 Lista de Salas</h1>
+
+    <!-- PESQUISAR SALA -->
+
+    <h2>🔎 Pesquisar Sala</h2>
+
+    <form action="/salas/pesquisar" method="GET">
+
+        <label>Número da sala:</label>
+
+        <input
+            type="text"
+            name="numero"
+            placeholder="Digite o número da sala"
+            value="{{pesquisa}}"
+            required
+        >
+
+        <button type="submit">
+            🔎 Pesquisar
+        </button>
+
+        <a href="/salas">
+            <button type="button">
+                📋 Mostrar todas
+            </button>
+        </a>
+
+    </form>
+
+    <hr>
+
+    <!-- LISTA DE SALAS -->
+
+    {{#each salas}}
+
+        <div class="sala">
+
+            <h2>🏫 Sala {{numero}}</h2>
+
+            <p>
+                <strong>Bloco:</strong>
+                {{bloco}}
+            </p>
+
+            <p>
+                <strong>Andar:</strong>
+                {{andar}}
+            </p>
+
+            <p>
+                <strong>Turma:</strong>
+                {{turma}}
+            </p>
+
+            <p>
+                <strong>Turno:</strong>
+                {{turno}}
+            </p>
+
+            <p>
+                <strong>Horário:</strong>
+                {{horario}}
+            </p>
+
+            <p>
+                <strong>Capacidade:</strong>
+                {{capacidade}}
+            </p>
+
+            <p>
+                <strong>Responsável:</strong>
+                {{responsavel}}
+            </p>
+
+            <p>
+                <strong>Status atual:</strong>
+                {{status}}
+            </p>
+
+            <!-- ATUALIZAR STATUS -->
+
+            <h3>🔄 Atualizar Status da Sala</h3>
+
+            <form
+                action="/salas/status/{{id}}"
+                method="POST"
+            >
+
+                <label>Novo status:</label>
+
+                <select name="status" required>
+
+                    <option value="">
+                        Selecione o novo status
+                    </option>
+
+                    <option value="Disponível">
+                        Disponível
+                    </option>
+
+                    <option value="Em uso">
+                        Em uso
+                    </option>
+
+                    <option value="Manutenção">
+                        Manutenção
+                    </option>
+
+                    <option value="Indisponível">
+                        Indisponível
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Atualizar Status
+                </button>
+
+            </form>
+
+            <p>
+                <strong>Observações:</strong>
+                {{observacoes}}
+            </p>
+
+            <br>
+
+            <!-- EDITAR SALA -->
+
+            <a href="/salas/editar/{{id}}">
+                <button type="button">
+                    ✏️ Editar
+                </button>
+            </a>
+
+            <!-- EXCLUIR SALA -->
+
+            <form
+                action="/salas/excluir/{{id}}"
+                method="POST"
+                style="display:inline;"
+            >
+
+                <button
+                    type="submit"
+                    onclick="return confirm('Tem certeza que deseja excluir esta sala?')"
+                >
+                    🗑️ Excluir
+                </button>
+
+            </form>
+
+        </div>
+
+        <hr>
+
+    {{else}}
+
+        <h3>❌ Nenhuma sala encontrada.</h3>
+
+    {{/each}}
+
+    <br>
+
+    <a href="/home">
+        ⬅️ Voltar ao início
+    </a>
+
+</body>
+
+</html>

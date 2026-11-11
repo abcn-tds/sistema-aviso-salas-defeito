@@ -1,0 +1,255 @@
+/* =========================================
+   CONFIGURAÇÃO GERAL
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    margin: 40px;
+    color: #333;
+}
+
+h1 {
+    color: #0d47a1;
+}
+
+h2 {
+    color: #174ea6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+button {
+    background: #0d47a1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+input,
+textarea,
+select {
+    width: 300px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+div {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   SALAS
+========================================= */
+
+.sala {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    max-width: 700px;
+}
+
+.sala h2 {
+    color: #0d47a1;
+    margin-top: 0;
+    border-bottom: 2px solid #e3eaf3;
+    padding-bottom: 10px;
+}
+
+.sala p {
+    margin: 10px 0;
+}
+
+.sala strong {
+    color: #333;
+}
+
+
+/* =========================================
+   FORMULÁRIOS DE SALA
+========================================= */
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   BOTÃO EXCLUIR
+========================================= */
+
+.btn-excluir {
+    background-color: #d32f2f;
+}
+
+.btn-excluir:hover {
+    background-color: #b71c1c;
+}
+
+
+/* =========================================
+   BOTÃO EDITAR
+========================================= */
+
+.btn-editar {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn-editar:hover {
+    background-color: #0d47a1;
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-container {
+    width: 450px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    color: #174ea6;
+}
+
+.login-container h2 {
+    margin-top: 30px;
+}
+
+.botoes-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.botao {
+    display: block;
+    padding: 15px;
+    background-color: #174ea6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.botao:hover {
+    background-color: #0d3b7a;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+.login-container input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.login-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #174ea6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.erro {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        margin: 20px;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .login-container {
+        width: auto;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .sala {
+        width: auto;
+    }
+
+}

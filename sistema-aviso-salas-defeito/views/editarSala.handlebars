@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar Sala</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+
+<body>
+
+    <h1>✏️ Editar Sala</h1>
+
+    <p>
+        Altere as informações da sala abaixo.
+    </p>
+
+
+    <form action="/salas/editar" method="POST">
+
+
+        <!-- ID DA SALA -->
+
+        <input
+            type="hidden"
+            name="id"
+            value="{{sala.id}}"
+        >
+
+
+        <!-- NÚMERO -->
+
+        <label>
+            Número da Sala:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            name="numero"
+            value="{{sala.numero}}"
+            placeholder="Ex: Sala 01"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- BLOCO -->
+
+        <label>
+            Bloco:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            name="bloco"
+            value="{{sala.bloco}}"
+            placeholder="Ex: Bloco A"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- ANDAR -->
+
+       <label>Andar:</label><br>
+
+<select name="andar" required>
+
+    <option value="">Selecione o andar</option>
+
+    <option value="Térreo">
+        Térreo
+    </option>
+
+    <option value="1º Andar">
+        1º Andar
+    </option>
+
+</select>
+
+<br><br>
+
+
+        <!-- TURMA -->
+
+        <label>
+            Turma:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            name="turma"
+            value="{{sala.turma}}"
+            placeholder="Ex: 8º Ano A"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- TURNO -->
+
+        <label>
+            Turno:
+        </label>
+
+        <br>
+
+        <select name="turno" required>
+
+            <option value="">
+                Selecione o turno
+            </option>
+
+            <option value="Manhã">
+                Manhã
+            </option>
+
+            <option value="Tarde">
+                Tarde
+            </option>
+
+            <option value="Noite">
+                Noite
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <!-- HORÁRIO -->
+
+        <label>
+            Horário de uso:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            name="horario"
+            value="{{sala.horario}}"
+            placeholder="Ex: 07:30 às 11:30"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- CAPACIDADE -->
+
+        <label>
+            Capacidade:
+        </label>
+
+        <br>
+
+        <input
+            type="number"
+            name="capacidade"
+            value="{{sala.capacidade}}"
+            min="1"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- RESPONSÁVEL -->
+
+        <label>
+            Responsável:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            name="responsavel"
+            value="{{sala.responsavel}}"
+            placeholder="Nome do responsável"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- STATUS -->
+
+        <label>
+            Status da sala:
+        </label>
+
+        <br>
+
+        <select name="status" required>
+
+            <option value="Disponível">
+                Disponível
+            </option>
+
+            <option value="Em uso">
+                Em uso
+            </option>
+
+            <option value="Manutenção">
+                Manutenção
+            </option>
+
+            <option value="Indisponível">
+                Indisponível
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <!-- OBSERVAÇÕES -->
+
+        <label>
+            Observações:
+        </label>
+
+        <br>
+
+        <textarea
+            name="observacoes"
+            rows="5"
+            cols="40"
+            placeholder="Informações adicionais..."
+        >{{sala.observacoes}}</textarea>
+
+        <br><br>
+
+
+        <!-- SALVAR -->
+
+        <button type="submit">
+            💾 Salvar Alterações
+        </button>
+
+
+    </form>
+
+
+    <br>
+
+
+    <a href="/salas">
+        ⬅ Voltar para salas
+    </a>
+
+
+</body>
+
+</html>

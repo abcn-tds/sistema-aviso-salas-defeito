@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Equipamento com Defeito</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1>🔧 Cadastrar Equipamento com Defeito</h1>
+
+    <form action="/defeitos/cadastrar-admin" method="POST">
+
+        <label>Sala:</label>
+        <input type="text" name="sala" placeholder="Número da sala" required>
+
+        <br><br>
+
+        <label>Equipamento:</label>
+        <select name="tipo" required>
+            <option value="">Selecione o equipamento</option>
+            <option value="Ar-condicionado">Ar-condicionado</option>
+            <option value="Computador">Computador</option>
+            <option value="Projetor">Projetor</option>
+            <option value="Ventilador">Ventilador</option>
+            <option value="Televisão">Televisão</option>
+            <option value="Outro">Outro</option>
+        </select>
+
+        <br><br>
+
+        <label>Descrição do problema:</label>
+        <textarea name="descricao"
+            placeholder="Descreva o problema do equipamento"
+            required></textarea>
+
+        <br><br>
+
+        <label>Status:</label>
+        <select name="status" required>
+            <option value="Pendente">Pendente</option>
+            <option value="Em manutenção">Em manutenção</option>
+            <option value="Resolvido">Resolvido</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Cadastrar equipamento</button>
+
+    </form>
+
+    <br>
+
+    <a href="/defeitos">Voltar para a lista de defeitos</a>
+
+</body>
+</html>

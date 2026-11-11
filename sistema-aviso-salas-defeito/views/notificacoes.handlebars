@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Notificações - ElectroSite</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1>Notificações de Defeitos</h1>
+
+    <p>Olá, {{usuario.nome}}!</p>
+
+    <h2>Avisos cadastrados</h2>
+
+    {{#if defeitos.length}}
+
+        {{#each defeitos}}
+            <div class="notificacao">
+                <h3>⚠️ Defeito informado</h3>
+
+                <p><strong>Sala:</strong> {{sala}}</p>
+                <p><strong>Tipo:</strong> {{tipo}}</p>
+                <p><strong>Descrição:</strong> {{descricao}}</p>
+                <p><strong>Status:</strong> {{status}}</p>
+                <p><strong>Informado por:</strong> {{responsavel}}</p>
+            </div>
+            <hr>
+        {{/each}}
+
+    {{else}}
+        <p>Nenhum defeito foi cadastrado.</p>
+    {{/if}}
+
+    <a href="/home">Voltar ao menu</a>
+
+</body>
+</html>
